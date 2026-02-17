@@ -1,3 +1,4 @@
+import { buffer } from "three/tsl";
 import type { FileData, FileFormat, FormatHandler } from "../FormatHandler.ts";
 
 import * as THREE from "three";

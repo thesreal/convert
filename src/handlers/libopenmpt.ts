@@ -127,11 +127,11 @@ class libopenmptHandler implements FormatHandler {
           for (var i = 0; i < readframes; i++) {
             rawAudio.push(left[i],right[i]);
           };
-          libopenmpt._openmpt_module_destroy(moduleMem);
-          libopenmpt._free(fileData);
-          libopenmpt._free(leftframes);
-          libopenmpt._free(rightframes);
         };
+       libopenmpt._openmpt_module_destroy(moduleMem);
+       libopenmpt._free(fileData);
+       libopenmpt._free(leftframes);
+       libopenmpt._free(rightframes);
         const wavby = this.convertToWav(new Float32Array(rawAudio), samplerate);
         outputFiles.push({
           name: currentfile.name.replace(/\.\w+$/, ".wav"),
